@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lập trình hướng đối tượng </title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            constructor(make, model, year) {
+                this.make = make;
+                this.model = model;
+                this.year = year;
+            }
+
+            displayInfo() {
+                console.log(`Car: ${this.make} ${this.model} (${this.year})`);
+            }
+        }
+
+        let car = new Car ('Honda', 'City', '2020')
+        car.displayInfo();
+    </script>
+</body>
+
+</html>

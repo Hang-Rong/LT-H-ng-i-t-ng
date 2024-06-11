@@ -1,0 +1,25 @@
+---Phạm vi của biến---
+
+- Biến toàn cục: Là biến đc khai báo 1 cách độc lập không nằm trong khối/ fuction nào.
+Tồn tại từ lúc khai báo đến hết chương trình.
+- Biến cục bộ: Là những biến được khai báo nằm trong 1 khối hay 1 function( chỉ tồn tại ở trong khối
+/function đó).
+
+- Block Scope (if,for,...)
+
+- Function Scope (function)
+
++ let :
+   phạm vi biến:  Block Scpoe
+   cơ chế hosting: không thể sử dụng biến trước khi khai báo
++ var : 
+    phạm vi: Function Scope
+    cơ chế hosting: có thể sử dụng biến trước khi khai báo
++ const: tương tự như'let' nhưng không thể thay đổi giá trị
+
+___
+
+chức năng confirm("")
+
+--- Lập trình hướng đối tượng (Object-Oriented Programming - OOP)---
+

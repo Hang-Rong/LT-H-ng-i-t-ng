@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bài tập Sinh Viên </title>
+</head>
+
+<body>
+    <script>
+        class Student {
+            constructor(name, age, scores) {
+                this.name = name;
+                this.age = age;
+                this.scores = scores;
+            }
+
+            setName(name) {
+                this.name = name;
+            }
+
+            setAge(age) {
+                this.age = age;
+            }
+
+            setScores(scores) {
+                this.scores = scores;
+            }
+
+            display() {
+                document.write(`Tên: ${this.name}<br>`);
+                document.write(`Tuổi: ${this.age}<br>`);
+                document.write(`Điểm số: ${this.scores.join(", ")}<br>`);
+                document.write(`Điểm trung bình: ${this.averageScore()}<br>`);
+            }
+
+            averageScore() {
+                let total = this.scores.reduce((sum, score) => sum + score, 0);
+                return (total / this.scores.length).toFixed(2);
+            }
+        }
+
+        let student1 = new Student("Nguyen Van A", 20, [8, 7, 9, 6, 10]);
+        let student2 = new Student("Tran Thi B", 21, [9, 8, 9, 8, 7]);
+
+        document.write("<h3>Thông tin sinh viên 1:</h3>");
+        student1.display();
+        document.write("<h3>Thông tin sinh viên 2:</h3>");
+        student2.display();
+
+        let avg1 = student1.averageScore();
+        let avg2 = student2.averageScore();
+
+        document.write("<h3>Sinh viên có điểm trung bình cao hơn:</h3>");
+        if (avg1 > avg2) {
+            student1.display();
+        } else if (avg1 < avg2) {
+            student2.display();
+        } else {
+            document.write("Cả hai sinh viên có điểm trung bình bằng nhau.<br>");
+        }
+    </script>
+</body>
+
+</html>
